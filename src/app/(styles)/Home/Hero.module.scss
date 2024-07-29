@@ -1,0 +1,236 @@
+@import "../variables";
+
+.heroSection {
+  position: relative;
+  padding-top: 56px;
+  padding-bottom: 120px;
+  @media screen and (min-width: 834px) {
+    padding-top: 110px;
+  }
+  @media screen and (min-width: 1440px) {
+    padding-top: 40px;
+    padding-bottom: 200px;
+  }
+  &_mainTitleWrapper {
+    @media screen and (min-width: 834px) {
+      position: relative;
+      margin-bottom: 226px;
+    }
+    @media screen and (min-width: 1440px) {
+      margin-top: 50px;
+      margin-left: 25px;
+      margin-bottom: 68px;
+    }
+    &_innerWrapper {
+      @media screen and (min-width: 834px) {
+        position: absolute;
+        top: 92px;
+        left: 71px;
+      }
+    }
+  }
+  &_bg {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    &_mob {
+      @media screen and (min-width: 834px) {
+        display: none;
+      }
+    }
+    &_tablet {
+      top: 30%;
+      left: 69%;
+      @media screen and (max-width: 833px) {
+        display: none;
+      }
+      @media screen and (min-width: 1440px) {
+        display: none;
+      }
+    }
+    &_pc {
+      top: 11%;
+      left: 7%;
+      @media screen and (max-width: 1439px) {
+        display: none;
+      }
+    }
+  }
+  &_wrapper {
+    position: relative;
+    z-index: 1;
+  }
+  &_wrapperLicense {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 40px;
+    @media screen and (min-width: 1440px) {
+      margin-bottom: 0px;
+    }
+  }
+}
+.innerWrapper {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+  z-index: 1;
+  @media screen and (min-width: 1440px) {
+    margin-right: 196px;
+  }
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn.left {
+  background-color: $accent-color;
+  color: $light-color;
+  @media screen and (max-width: 419px) {
+    margin-bottom: 16px;
+  }
+  @media screen and (min-width: 420px) {
+    margin-right: 16px;
+  }
+  @media screen and (min-width: 834px) {
+    width: 213px;
+    margin-right: 24px;
+    margin-left: 267px;
+  }
+  @media screen and (min-width: 1440px) {
+    margin-left: 0px;
+    margin-right: 20px;
+  }
+}
+.btn.right {
+  background-color: transparent;
+  color: $accent-color;
+  @media screen and (min-width: 834px) {
+    width: 176px;
+  }
+}
+.heroTitle {
+  font-family: var(--font-lato);
+  color: $dark-color;
+  font-size: 46px;
+  font-weight: 300;
+  line-height: 1.2;
+  text-transform: uppercase;
+  @media screen and (min-width: 834px) {
+    font-size: 70px;
+  }
+  .accentText {
+    color: $accent-color;
+    &_left {
+      @media screen and (min-width: 834px) {
+        margin-left: 132px;
+      }
+    }
+    &_right {
+      @media screen and (min-width: 834px) {
+        margin-right: 50px;
+      }
+      @media screen and (min-width: 1440px) {
+        margin-right: 0px;
+      }
+    }
+  }
+  .number {
+    font-size: 88px;
+    font-weight: 500;
+    @media screen and (min-width: 834px) {
+      font-size: 150px;
+      vertical-align: text-top;
+    }
+  }
+}
+.rightText {
+  text-align: right;
+  position: relative;
+  z-index: 1;
+  @media screen and (min-width: 834px) {
+    width: 693px;
+  }
+}
+.heroText_license {
+  font-family: var(--font-lato);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.2;
+  color: $accent-color;
+  margin-top: 120px;
+  width: 140px;
+  height: 54px;
+  @media screen and (max-width: 404px) {
+    margin-top: 51px;
+  }
+  @media screen and (min-width: 834px) {
+    font-size: 18px;
+    width: 174px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 249px;
+    margin-top: 0px;
+  }
+}
+.heroImg {
+  position: absolute;
+  top: 350px;
+  width: 182px;
+  height: 190px;
+  z-index: 0;
+  @media screen and (min-width: 834px) {
+    width: 267px;
+    height: 267px;
+    top: 413px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 315px;
+    height: 315px;
+    top: 0px;
+    right: 0px;
+  }
+}
+.hero_buttonWrapper {
+  display: flex;
+  justify-content: center;
+  @media screen and (max-width: 419px) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media screen and (min-width: 1440px) {
+    justify-content: center;
+  }
+}
+.icon {
+  width: 33px;
+  height: 33px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 15px;
+  }
+}
+.iconArrowLeft {
+  stroke: $light-color;
+  margin-left: 15px;
+  width: 24px;
+  height: 24px;
+}
+.iconArrowRight {
+  stroke: $accent-color;
+  margin-left: 15px;
+  width: 24px;
+  height: 24px;
+}
+.bottomWrapper {
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    margin-top: 278px;
+  }
+}
+.wrapperPosition {
+  @media screen and (min-width: 1440px) {
+    position: relative;
+  }
+}

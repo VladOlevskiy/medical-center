@@ -1,7 +1,11 @@
+import Hero from "./(components)/Home/Hero.jsx";
+import Info from "./(components)/Home/Info.jsx";
+
 export default function Home() {
   return (
     <main>
-      <h1>Home page</h1>
+      <Hero />
+      <Info />
     </main>
   );
 }

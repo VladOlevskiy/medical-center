@@ -1,0 +1,21 @@
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+  overflow: hidden;
+  @media screen and (min-width: 428px) {
+    max-width: 428px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  @media screen and (min-width: 834px) {
+    padding-left: 32px;
+    padding-right: 32px;
+    max-width: 834px;
+  }
+  @media screen and (min-width: 1440px) {
+    padding-left: 105px;
+    padding-right: 105px;
+    max-width: 1440px;
+  }
+}

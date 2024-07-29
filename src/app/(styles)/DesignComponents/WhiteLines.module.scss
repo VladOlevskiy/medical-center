@@ -1,0 +1,43 @@
+@import "../variables";
+.whiteLineFirst {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  margin-top: 1px;
+  background-color: $light-color;
+  height: 5px;
+  &_bottom {
+    top: auto;
+    bottom: 0px;
+    margin-top: 0px;
+    margin-bottom: 1px;
+  }
+}
+.whiteLineSecond {
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  width: 100%;
+  width: 100%;
+  background-color: $light-color;
+  height: 4px;
+  &_bottom {
+    top: auto;
+    bottom: 8px;
+  }
+}
+
+.whiteLineThird {
+  position: absolute;
+  top: 15px;
+  left: 0px;
+  width: 100%;
+  width: 100%;
+  background-color: $light-color;
+  height: 2px;
+  &_bottom {
+    top: auto;
+    bottom: 15px;
+  }
+}

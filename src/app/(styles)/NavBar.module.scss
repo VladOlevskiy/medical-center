@@ -1,0 +1,131 @@
+@import "variables";
+
+.logo {
+  margin-right: auto;
+  @media screen and (min-width: 834px) {
+    margin-right: 301px;
+  }
+  @media screen and (min-width: 1440px) {
+    margin-right: 156px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  // @media screen and (min-width: 1440px) {
+  //   justify-content: unset;
+  // }
+}
+.navList {
+  display: flex;
+
+  list-style: none;
+  flex-wrap: wrap;
+  @media screen and (max-width: 833px) {
+    justify-content: center;
+    max-width: 486px;
+  }
+  li {
+    min-width: 180px;
+    margin-bottom: 10px;
+    @media screen and (max-width: 833px) {
+      margin-right: 10px;
+    }
+    @media screen and (min-width: 834px) and (max-width: 1439px) {
+      &:first {
+        margin-right: 55px;
+        margin-bottom: 50px;
+      }
+      &:nth-child(2n + 1) {
+        margin-right: 55px;
+      }
+      &:nth-last-child(-n + 2) {
+        margin-bottom: 0px;
+      }
+    }
+    @media screen and (min-width: 1440px) {
+      &:first-child {
+        margin-right: 105px;
+      }
+      &:nth-child(2) {
+        margin-right: 375px;
+      }
+      &:nth-child(4) {
+        margin-left: 285px;
+      }
+    }
+    a {
+      position: relative;
+      color: $dark-color;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 300;
+      padding-bottom: 4px;
+      transition: color 350ms ease;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &:hover,
+      &:focus {
+        color: $accent-color;
+        .navList_line {
+          background-color: $accent-color;
+        }
+        .icon {
+          stroke: $accent-color;
+        }
+      }
+    }
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  stroke: $dark-color;
+  transition: stroke 350ms ease;
+}
+
+.navList_line {
+  position: absolute;
+  height: 1px;
+  background-color: $dark-color;
+  width: 180px;
+  top: 27px;
+  left: 0px;
+  transition: background-color 350ms ease;
+}
+.logo {
+  height: 56px;
+  width: 45px;
+  @media screen and (min-width: 834px) {
+    height: 68px;
+    width: 54px;
+  }
+}
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  @media screen and (min-width: 834px) {
+    display: none;
+  }
+  & img {
+    transition: scale 500ms ease;
+  }
+  &:hover {
+    & img {
+      scale: 1.2;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    display: none;
+  }
+}
+.navBigScreen {
+  @media screen and (max-width: 833px) {
+    display: none;
+  }
+}
