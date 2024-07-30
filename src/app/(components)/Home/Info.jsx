@@ -74,14 +74,18 @@ const Info = () => {
                 м.Рівне, вул. Захисників Маріуполя,41
               </p>
             </div>
-            <a
-              href="https://www.google.com/maps/place/%D0%84%D0%B2%D0%B0/@50.6241957,26.2832533,17z/data=!3m1!4b1!4m6!3m5!1s0x472f14a1d55eda4b:0x32eb6d0eca9b5245!8m2!3d50.6241923!4d26.2858282!16s%2Fg%2F1262p_jsg?entry=ttu"
-              className={style.infoSection_location_link}
-              target="blank"
-            >
-              На карті
-              <ArrowNavMenu className={style.infoSection_location_link_icon} />
-            </a>
+            <div>
+              <a
+                href="https://www.google.com/maps/place/%D0%84%D0%B2%D0%B0/@50.6241957,26.2832533,17z/data=!3m1!4b1!4m6!3m5!1s0x472f14a1d55eda4b:0x32eb6d0eca9b5245!8m2!3d50.6241923!4d26.2858282!16s%2Fg%2F1262p_jsg?entry=ttu"
+                className={style.infoSection_location_link}
+                target="blank"
+              >
+                На карті
+                <ArrowNavMenu
+                  className={style.infoSection_location_link_icon}
+                />
+              </a>
+            </div>
           </div>
         </div>
       </div>

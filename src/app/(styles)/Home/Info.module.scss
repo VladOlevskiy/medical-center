@@ -29,7 +29,6 @@
   }
   &_item {
     position: relative;
-    max-width: 324px;
     @media screen and (min-width: 834px) {
       width: 690px;
     }
@@ -81,7 +80,6 @@
   &_location {
     position: relative;
     margin-left: 56px;
-    max-width: 324px;
     @media screen and (min-width: 834px) {
       margin-left: 80px;
       width: 100%;
