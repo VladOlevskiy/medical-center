@@ -4,7 +4,9 @@ import Services from "./(components)/Home/Services.jsx";
 import Advantages from "./(components)/Home/Advantages.jsx";
 
 async function getProjects() {
-  const res = await fetch("http://localhost:3000/servicesData.json");
+  const res = await fetch(
+    "https://eva-rivne-medical.vercel.app/servicesData.json"
+  );
   const projects = await res.json();
 
   return projects;
