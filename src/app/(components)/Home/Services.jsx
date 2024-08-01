@@ -4,8 +4,6 @@ import ArrowNavMenu from "../icons/ArrowNavMenu";
 import { Button } from "../UI/Button";
 
 const Services = ({ allServices }) => {
-  console.log(allServices);
-
   return (
     <section className={styles.services}>
       <div className={containerStyle.container}>
