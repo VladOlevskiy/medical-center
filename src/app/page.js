@@ -2,18 +2,20 @@ import Hero from "./(components)/Home/Hero.jsx";
 import Info from "./(components)/Home/Info.jsx";
 import Services from "./(components)/Home/Services.jsx";
 import Advantages from "./(components)/Home/Advantages.jsx";
+import { promises as fs } from "fs";
 
-async function getProjects() {
-  const res = await fetch(
-    "https://eva-rivne-medical.vercel.app/servicesData.json"
+async function getServices() {
+  const file = await fs.readFile(
+    process.cwd() + "/public/servicesData.json",
+    "utf8"
   );
-  const projects = await res.json();
-
-  return projects;
+  const data = JSON.parse(file);
+  console.log(data);
+  return data;
 }
 
 export default async function Home() {
-  const allServices = await getProjects();
+  const allServices = await getServices();
   return (
     <main>
       <Hero />
