@@ -3,6 +3,7 @@ import Info from "./(components)/Home/Info.jsx";
 import Services from "./(components)/Home/Services.jsx";
 import Advantages from "./(components)/Home/Advantages.jsx";
 import { promises as fs } from "fs";
+import Contact from "./(components)/Home/Contact.jsx";
 
 async function getServices() {
   const file = await fs.readFile(
@@ -10,7 +11,6 @@ async function getServices() {
     "utf8"
   );
   const data = JSON.parse(file);
-  console.log(data);
   return data;
 }
 
@@ -22,6 +22,7 @@ export default async function Home() {
       <Info />
       <Services allServices={allServices} />
       <Advantages />
+      <Contact />
     </main>
   );
 }

@@ -3,7 +3,7 @@
 .infoSection {
   background-color: $brown-color;
   position: relative;
-  font-family: var(--font-lato);
+  font-family: -var(--font-lato);
   line-height: 1.2;
 
   &_img {
