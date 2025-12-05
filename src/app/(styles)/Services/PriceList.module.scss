@@ -1,0 +1,133 @@
+@import "../variables";
+
+.pricePage {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  @media screen and (min-width: 834px) {
+    padding-top: 150px;
+    padding-bottom: 150px;
+  }
+}
+.priceListSection {
+  &_navWrapper {
+    &_titleWrapper {
+      &_title {
+        font-family: var(--font-lato);
+        font-size: 42px;
+        color: $dark-color;
+        font-weight: 300;
+        text-align: end;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+        &_firstSpan {
+          color: $dark-color;
+        }
+        &_secondSpan {
+          color: $accent-color;
+        }
+      }
+    }
+  }
+}
+.priceList {
+  @media screen and (min-width: 1440px) {
+    // display: flex;
+    // flex-wrap: wrap;
+    // width: 1220px;
+    height: 1300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+
+  .item {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+    list-style: none;
+    @media screen and (min-width: 1440px) {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+      width: 595px;
+    }
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .titleWrapper {
+      .title {
+        font-family: var(--font-lato);
+        font-size: 15px;
+        color: $dark-color;
+        font-weight: 300;
+        @media screen and (min-width: 834px) {
+          font-size: 18px;
+        }
+      }
+    }
+    .textWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      .price {
+        font-family: var(--font-lato);
+        font-size: 15px;
+        color: $accent-color;
+        font-weight: 300;
+        margin-bottom: 10px;
+        @media screen and (min-width: 834px) {
+          font-size: 18px;
+        }
+      }
+      .link {
+        font-family: var(--font-lato);
+        font-size: 14px;
+        color: $dark-color;
+        font-weight: 300;
+        text-decoration: none;
+      }
+    }
+  }
+  .line {
+    height: 1px;
+    width: 100%;
+    background-color: $dark-color;
+  }
+  .line_accent {
+    background-color: $accent-color;
+  }
+}
+.groupName {
+  color: $accent-color !important;
+  text-transform: uppercase;
+}
+
+.listBtns {
+  display: flex;
+  list-style: none;
+}
+.itemBtn {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+.btnPagination {
+  font-family: var(--font-lato);
+  cursor: pointer;
+  border: none;
+  color: $accent-color;
+  font-size: 18px;
+}
+.paginationWrapper {
+  display: flex;
+  justify-content: center;
+}
+.span {
+  color: $accent-color;
+  font-size: 18px;
+}

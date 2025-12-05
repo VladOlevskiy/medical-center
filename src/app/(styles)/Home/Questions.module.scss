@@ -1,0 +1,165 @@
+@import "../variables";
+
+.questionsSection {
+  padding-bottom: 120px;
+  @media screen and (min-width: 834px) {
+    padding-top: 30px;
+    padding-bottom: 150px;
+  }
+  @media screen and (min-width: 1440px) {
+    padding-top: 80px;
+  }
+  &_imgBackground {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 207.21px;
+    width: 118.35px;
+  }
+  &_title {
+    font-family: var(--font-lato);
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: $dark-color;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    @media screen and (min-width: 834px) {
+      font-size: 48px;
+    }
+    &_spanFirst {
+      @media screen and (min-width: 834px) {
+        margin-left: 267px;
+      }
+      @media screen and (min-width: 1440px) {
+        margin-left: 789px;
+      }
+    }
+    &_spanSecond {
+      @media screen and (min-width: 834px) {
+        display: flex;
+        align-items: center;
+        margin-left: 169px;
+      }
+      @media screen and (min-width: 1440px) {
+        margin-left: 701px;
+      }
+    }
+    &_icon {
+      display: none;
+      width: 58px;
+      height: 58px;
+      stroke: $accent-color;
+      @media screen and (min-width: 834px) {
+        display: unset;
+        margin-right: 166px;
+      }
+      @media screen and (min-width: 1440px) {
+        margin-right: 156px;
+      }
+    }
+    &_spanThird {
+      color: $accent-color;
+      display: flex;
+      justify-content: flex-end;
+      @media screen and (min-width: 834px) {
+        display: unset;
+      }
+    }
+  }
+  &_list {
+    &_item {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      &:not(:last-child) {
+        padding-bottom: 16px;
+        border-bottom: 1px solid $accent-color;
+        @media screen and (min-width: 834px) {
+          padding-bottom: 24px;
+        }
+        @media screen and (min-width: 1440px) {
+          padding-bottom: 20px;
+        }
+      }
+      &:not(:first-child) {
+        margin-top: 16px;
+        @media screen and (min-width: 834px) {
+          margin-top: 24px;
+        }
+        @media screen and (min-width: 1440px) {
+          margin-top: 20px;
+        }
+      }
+      //   padding-bottom: 16px;
+      //   border-bottom: 1px solid $accent-color;
+      &_imgNumber {
+        width: 32px;
+        height: 32px;
+        @media screen and (min-width: 834px) {
+          height: 40px;
+          width: 40px;
+        }
+      }
+      &_textWrapper {
+        width: 276px;
+        margin-left: 24px;
+        margin-right: 16px;
+        @media screen and (min-width: 834px) {
+          width: 682px;
+          margin-left: 40px;
+          margin-right: 32px;
+        }
+        @media screen and (min-width: 1440px) {
+          width: 915px;
+          margin-left: 170px;
+          margin-right: 275px;
+        }
+        &_titleItem {
+          font-family: var(--font-lato);
+          font-size: 22px;
+          font-weight: 300;
+          line-height: 1.2;
+          color: $accent-color;
+          text-transform: uppercase;
+          margin-bottom: 12px;
+          @media screen and (min-width: 834px) {
+            font-size: 28px;
+          }
+        }
+        &_textItem {
+          font-family: var(--font-lato);
+          color: $dark-color;
+          font-weight: 300;
+          line-height: 1.2;
+          font-size: 15px;
+          @media screen and (min-width: 834px) {
+            font-size: 18px;
+          }
+        }
+      }
+      &_button {
+        border: none;
+        background-color: transparent;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &_icon {
+          width: 32px;
+          height: 32px;
+          @media screen and (min-width: 834px) {
+            height: 40px;
+            width: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+.wrapperPosition {
+  position: relative;
+  overflow: visible;
+}

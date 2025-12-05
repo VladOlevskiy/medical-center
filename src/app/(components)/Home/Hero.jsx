@@ -1,8 +1,9 @@
-import { Button } from "../UI/Button";
 import styles from "../../(styles)/Home/Hero.module.scss";
 import containerStyle from "../../(styles)/Container.module.scss";
 import IconLicense from "../icons/IconLicense";
-import ArrowNavMenu from "../icons/ArrowNavMenu";
+import { NavLinkWithArrow } from "../UI/NavLinkWithArrow";
+
+import { MotionSpan } from "../MotionComponents/MotionSpan";
 
 const Hero = () => {
   return (
@@ -26,27 +27,64 @@ const Hero = () => {
         <div className={styles.heroSection_mainTitleWrapper}>
           <div>
             <h1 className={styles.heroTitle}>
-              <span className={styles.accentText}>
+              <MotionSpan
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 0.8, duration: 1.5, ease: "linear" }}
+                viewport={{ once: false }}
+                className={styles.accentText}
+              >
                 <span className={styles.number}>20 </span>років
-              </span>
+              </MotionSpan>
             </h1>
           </div>
           <div className={styles.heroSection_mainTitleWrapper_innerWrapper}>
             <h1 className={`${styles.heroTitle} ${styles.rightText}`}>
-              про&shy;фесійного <span className={styles.aaa}>підходу</span>
-              <span
+              <MotionSpan
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 1.2, duration: 1.5 }}
+                viewport={{ once: false }}
+              >
+                про&shy;фесійного
+              </MotionSpan>{" "}
+              <MotionSpan
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 1.6, duration: 1.5 }}
+                viewport={{ once: false }}
+                className={styles.aaa}
+              >
+                підходу
+              </MotionSpan>
+              <MotionSpan
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 2, duration: 1.5 }}
+                viewport={{ once: false }}
                 className={`${styles.accentText} ${styles.accentText_right}`}
               >
                 {" "}
                 до
-              </span>{" "}
-              вашої краси &
-              <span
+              </MotionSpan>{" "}
+              <MotionSpan
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 2.4, duration: 1.5 }}
+                viewport={{ once: false }}
+              >
+                вашої краси &
+              </MotionSpan>
+              <MotionSpan
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ delay: 2.8, duration: 1.5 }}
+                viewport={{ once: false }}
                 className={`${styles.accentText} ${styles.accentText_left}`}
               >
                 {" "}
                 здоров'я
-              </span>
+              </MotionSpan>
             </h1>
           </div>
         </div>
@@ -66,17 +104,16 @@ const Hero = () => {
             </div>
           </div>
           <div className={styles.hero_buttonWrapper}>
-            <Button
-              className={`${styles.btn} ${styles.left}`}
-              type={"button"}
+            <NavLinkWithArrow
+              classNameLink={`${styles.btn} ${styles.left}`}
               text={"Консультація"}
-              children={<ArrowNavMenu className={styles.iconArrowLeft} />}
+              toLink={"/#section-contact"}
+              classNameArrow={`${styles.arrow} ${styles.left}`}
             />
-            <Button
-              className={`${styles.btn} ${styles.right}`}
-              type={"button"}
+            <NavLinkWithArrow
+              classNameLink={`${styles.btn} ${styles.right}`}
               text={"Послуги"}
-              children={<ArrowNavMenu className={styles.iconArrowRight} />}
+              toLink={"/services/medical"}
             />
           </div>
         </div>

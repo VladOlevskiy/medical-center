@@ -6,6 +6,8 @@ import IconNumberOne from "../icons/IconNumberOne";
 import IconNumberTwo from "../icons/IconNumberTwo";
 import IconLocation from "../icons/IconLocation";
 import ArrowNavMenu from "../icons/ArrowNavMenu";
+import { MotionDiv } from "../MotionComponents/MotionDiv";
+import { MotionItem } from "../MotionComponents/MotionItem";
 
 const Info = () => {
   return (
@@ -15,7 +17,13 @@ const Info = () => {
       <div className={style.wrapper}>
         <div className={containerStyle.container}>
           <div className={style.mainWrapper}>
-            <div className="imgWrapper">
+            <MotionDiv
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="imgWrapper"
+            >
               <picture>
                 <source
                   srcSet="/media/pictures/infoImgMob.jpg"
@@ -37,10 +45,16 @@ const Info = () => {
                   className={style.infoSection_img}
                 />
               </picture>
-            </div>
-            <div className="textWrapper">
+            </MotionDiv>
+            <MotionDiv className="textWrapper">
               <ul className={style.infoSection_list}>
-                <li className={style.infoSection_item}>
+                <MotionItem
+                  initial={{ opacity: 0, x: -40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.3, duration: 0.9 }}
+                  viewport={{ once: true }}
+                  className={style.infoSection_item}
+                >
                   <IconNumberOne className={style.infoSection_item_icon} />
                   <h3 className={style.infoSection_item_title}>Хто ми?</h3>
                   <p className={style.infoSection_item_text}>
@@ -48,8 +62,14 @@ const Info = () => {
                     де ми втілюємо ваші найзаповітніші красиві мрії у реальність
                     уже протягом 20 років
                   </p>
-                </li>
-                <li className={style.infoSection_item}>
+                </MotionItem>
+                <MotionItem
+                  initial={{ opacity: 0, x: -40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.6, duration: 0.9 }}
+                  viewport={{ once: true }}
+                  className={style.infoSection_item}
+                >
                   <IconNumberTwo className={style.infoSection_item_icon} />
                   <h3 className={style.infoSection_item_title}>
                     Що ми роробимо ?
@@ -60,13 +80,19 @@ const Info = () => {
                     спектр послуг і задовольнити всі Ваші потреби у догляді за
                     собою
                   </p>
-                </li>
+                </MotionItem>
               </ul>
-            </div>
+            </MotionDiv>
           </div>
           <div className={style.line}></div>
           <WhiteLineBottom />
-          <div className={style.infoSection_location}>
+          <MotionDiv
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3, duration: 0.9 }}
+            viewport={{ once: true }}
+            className={style.infoSection_location}
+          >
             <IconLocation className={style.infoSection_location_icon} />
             <div className={style.infoSection_location_wrapperText}>
               <h3 className={style.infoSection_location_title}>Локація</h3>
@@ -86,7 +112,7 @@ const Info = () => {
                 />
               </a>
             </div>
-          </div>
+          </MotionDiv>
         </div>
       </div>
     </section>

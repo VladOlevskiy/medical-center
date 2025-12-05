@@ -1,0 +1,61 @@
+@import "../variables";
+
+.link {
+  font-family: var(--font-lato);
+  display: flex;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  width: 182px;
+  height: 50px;
+  padding: 15.5px 24.5px 15.5px 24.5px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2;
+  background-color: transparent;
+  border: 1px solid $accent-color;
+  cursor: pointer;
+  transition: scale 500ms ease;
+  &:hover,
+  &:focus {
+    scale: 0.97;
+  }
+  @media screen and (min-width: 834px) {
+    min-width: 213px;
+    min-height: 50px;
+    font-size: 18px;
+    padding: 14px 34px 14px 34px;
+  }
+}
+.arrow {
+  stroke: $accent-color;
+  margin-left: 15px;
+  width: 24px;
+  height: 24px;
+}
+.navLink {
+  font-family: var(--font-lato);
+  display: flex;
+  text-decoration: none;
+  width: 182px;
+  height: 50px;
+  padding: 15.5px 24.5px 15.5px 24.5px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.2;
+  background-color: transparent;
+  border: 1px solid $accent-color;
+  cursor: pointer;
+  transition: scale 500ms ease;
+  &:hover,
+  &:focus {
+    scale: 0.97;
+  }
+
+  @media screen and (min-width: 834px) {
+    min-width: 213px;
+    min-height: 50px;
+    font-size: 18px;
+    padding: 14px 34px 14px 34px;
+  }
+}

@@ -1,5 +1,4 @@
 "use client";
-
 import styles from "../../(styles)/Home/Advantages.module.scss";
 import containerStyle from "../../(styles)/Container.module.scss";
 import { useEffect, useState } from "react";
@@ -8,6 +7,7 @@ import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import LineAdvantagesTablet from "../icons/LineAdvantagesTablet";
 import LineAdvantagesPC from "../icons/LineAdvantagesPC";
+import { MotionDiv } from "../MotionComponents/MotionDiv";
 
 const Advantages = () => {
   const advantagesList = [
@@ -36,17 +36,6 @@ const Advantages = () => {
   const [activeText, setActiveText] = useState("");
   const [changeActive, setChangeActive] = useState(false);
 
-  // const handleButtonClick = (id) => {
-  //   setActiveAdvantage(id);
-  //   const updatedAdvantages = [...advantage];
-  //   const index = updatedAdvantages.findIndex((item) => item.id === id);
-  //   const [selectedAdvantage] = updatedAdvantages.splice(index, 1);
-  //   updatedAdvantages.splice(1, 0, selectedAdvantage);
-  //   setAdvantage(updatedAdvantages);
-  //   if (activeAdvantage === advantage[1].id) {
-  //     setChangeActive((state) => !state);
-  //   }
-  // };
   const handleButtonClick = (id) => {
     setActiveAdvantage(id);
     if (window.innerWidth <= 833) {
@@ -73,27 +62,31 @@ const Advantages = () => {
         <div className={styles.advantagesSection_imgBackground} />
         <div className={styles.wrapper}>
           <div className={containerStyle.container}>
-            <h2 className={styles.advantagesSection_title}>
-              Ми надаємо{" "}
-              <span className={styles.advantagesSection_title_firstSpan}>
-                найкращий
-              </span>{" "}
-              <span className={styles.advantagesSection_title_secondSpan}>
-                сервіс
-              </span>
-            </h2>
+            <MotionDiv
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3, duration: 0.9 }}
+              viewport={{ once: true }}
+            >
+              <h2 className={styles.advantagesSection_title}>
+                Ми надаємо{" "}
+                <span className={styles.advantagesSection_title_firstSpan}>
+                  найкращий
+                </span>{" "}
+                <span className={styles.advantagesSection_title_secondSpan}>
+                  сервіс
+                </span>
+              </h2>
+            </MotionDiv>
             <div className={styles.advantagesSection_listWrapper}>
               <ul className={styles.advantagesSection_list}>
                 <AnimatePresence>
                   {advantage.map((adv) => (
                     <motion.li
-                      // initial={{ opacity: 0 }}
-                      // animate={{ opacity: 1 }}
-                      // exit={{ opacity: 0 }}
-                      // transition={{
-                      //   ease: "linear",
-                      //   duration: 0.4,
-                      // }}
+                      initial={{ opacity: 0, x: -40 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.6, duration: 0.9 }}
+                      viewport={{ once: true }}
                       key={adv.id}
                       className={`${styles.advantagesSection_list_item} ${
                         activeAdvantage === adv.id && `${styles.activeItem}`
@@ -121,8 +114,12 @@ const Advantages = () => {
               </ul>
 
               <ul>
-                {advantage.map((adv) => (
-                  <li
+                {advantage.map((adv, index) => (
+                  <motion.li
+                    initial={{ opacity: 0, x: -70 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: (index + 0.5) * 0.2, duration: 0.7 }}
+                    viewport={{ once: true }}
                     key={adv.id}
                     className={`${
                       styles.advantagesSection_textWrapperAbsolute
@@ -144,7 +141,7 @@ const Advantages = () => {
                     >
                       {adv.content}
                     </p>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
               <LineAdvantagesTablet

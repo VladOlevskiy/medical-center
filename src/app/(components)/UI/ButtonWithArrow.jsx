@@ -8,9 +8,14 @@ export const ButtonWithArrow = ({
   classNameBtn,
   classNameArrow,
   children,
+  onClick,
 }) => {
   return (
-    <button type={type} className={`${styles.button} ${classNameBtn}`}>
+    <button
+      onClick={onClick}
+      type={type}
+      className={`${styles.button} ${classNameBtn}`}
+    >
       {text}
       {children}
       <ArrowNavMenu className={`${styles.arrow} ${classNameArrow}`} />

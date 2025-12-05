@@ -1,0 +1,102 @@
+@import "../variables";
+
+.mainWrapper {
+  margin-bottom: 120px;
+  @media screen and (min-width: 1440px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+}
+.navList {
+  font-family: var(--font-lato);
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 16px;
+  @media screen and (min-width: 834px) {
+    gap: 0px;
+    row-gap: 10px;
+    column-gap: 32px;
+  }
+  @media screen and (min-width: 1440px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  li {
+    a {
+      position: relative;
+      font-family: var(--font-lato);
+      width: 182px;
+      font-size: 16px;
+      color: $dark-color;
+      text-decoration: none;
+      font-weight: 300;
+      padding-bottom: 4px;
+      transition: color 350ms ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      &:hover,
+      &:focus {
+        color: $accent-color;
+        .navList_line {
+          background-color: $accent-color;
+        }
+        .icon {
+          stroke: $accent-color;
+        }
+      }
+      @media screen and (min-width: 834px) {
+        width: 369px;
+        font-size: 18px;
+      }
+      @media screen and (min-width: 1440px) {
+        width: 390px;
+      }
+    }
+  }
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  stroke: $dark-color;
+  transition: stroke 350ms ease;
+}
+
+.navList_line {
+  position: absolute;
+  height: 1px;
+  background-color: $dark-color;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  transition: background-color 350ms ease;
+}
+.title {
+  font-family: var(--font-lato);
+  font-size: 42px;
+  color: $dark-color;
+  font-weight: 300;
+  text-align: end;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  @media screen and (min-width: 834px) {
+    font-size: 70px;
+    margin-bottom: 32px;
+  }
+  @media screen and (min-width: 834px) {
+    margin-bottom: 0px;
+  }
+  &_firstSpan {
+    color: $dark-color;
+  }
+  &_secondSpan {
+    color: $accent-color;
+  }
+}

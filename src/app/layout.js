@@ -1,12 +1,7 @@
-// import { Lato } from "next/font/google";
 import NavBar from "./(components)/NavBar/NavBar";
+import Footer from "./(components)/Footer/Footer";
 import "./(styles)/globals.scss";
 import localFont from "next/font/local";
-// const lato = Lato({
-//   weight: ["300", "400", "700"],
-//   style: ["normal"],
-//   subsets: ["latin"],
-// });
 
 const myFont = localFont({
   src: [
@@ -35,10 +30,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="ua">
       <body className={myFont.variable}>
         <NavBar />
-        {children}
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

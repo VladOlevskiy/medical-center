@@ -2,6 +2,9 @@ import styles from "../../(styles)/Home/Services.module.scss";
 import containerStyle from "../../(styles)/Container.module.scss";
 import ArrowNavMenu from "../icons/ArrowNavMenu";
 import { Button } from "../UI/Button";
+import { NavLinkWithArrow } from "../UI/NavLinkWithArrow";
+import { MotionDiv } from "../MotionComponents/MotionDiv";
+import { MotionItem } from "../MotionComponents/MotionItem";
 
 const Services = ({ allServices }) => {
   return (
@@ -16,7 +19,12 @@ const Services = ({ allServices }) => {
               alt="arrow"
             />
           </div>
-          <div>
+          <MotionDiv
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.3, duration: 0.9 }}
+            viewport={{ once: true }}
+          >
             <h2 className={styles.services_title}>
               <span className={styles.services_title_spanFirst}>Ми</span>{" "}
               <span className={styles.services_title_spanSecond}>
@@ -29,12 +37,19 @@ const Services = ({ allServices }) => {
                 </span>
               </span>
             </h2>
-          </div>
+          </MotionDiv>
         </div>
         <ul className={styles.services_list}>
           {allServices &&
             allServices.map((service) => (
-              <li className={styles.services_list_item} key={service.id}>
+              <MotionItem
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.4, duration: 0.9 }}
+                viewport={{ once: true }}
+                className={styles.services_list_item}
+                key={service.id}
+              >
                 <div className={styles.services_list_item_imgWrapper}>
                   <img
                     src={`${service.icon}`}
@@ -62,15 +77,22 @@ const Services = ({ allServices }) => {
                     </a>
                   </div>
                 </div>
-              </li>
+              </MotionItem>
             ))}
         </ul>
-        <Button
-          className={`${styles.btn} ${styles.btnServices}`}
-          type={"button"}
-          text={"Консультація"}
-          children={<ArrowNavMenu className={styles.iconArrow} />}
-        />
+        <MotionDiv
+          initial={{ opacity: 0, x: -40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ delay: 0.4, duration: 0.9 }}
+          viewport={{ once: true }}
+        >
+          <NavLinkWithArrow
+            classNameLink={`${styles.btn} ${styles.btnServices}`}
+            text={"Консультація"}
+            toLink={"/#section-contact"}
+            classNameArrow={`${styles.arrow} ${styles.white}`}
+          />
+        </MotionDiv>
       </div>
     </section>
   );

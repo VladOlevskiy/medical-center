@@ -4,6 +4,8 @@ import Services from "./(components)/Home/Services.jsx";
 import Advantages from "./(components)/Home/Advantages.jsx";
 import { promises as fs } from "fs";
 import Contact from "./(components)/Home/Contact.jsx";
+import Instagram from "./(components)/Home/Instagram.jsx";
+import Questions from "./(components)/Home/Questions.jsx";
 
 async function getServices() {
   const file = await fs.readFile(
@@ -23,6 +25,8 @@ export default async function Home() {
       <Services allServices={allServices} />
       <Advantages />
       <Contact />
+      <Instagram />
+      <Questions />
     </main>
   );
 }

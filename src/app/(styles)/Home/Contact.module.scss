@@ -1,6 +1,447 @@
 @import "../variables";
 
 .contactSection {
-  padding-top: 50px;
-  padding-left: 50px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  overflow: hidden;
+  // @media screen and (min-width: 1440px) {
+  //   padding-top: 300px;
+  // }
+  &_title {
+    font-family: var(--font-lato);
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: $dark-color;
+    text-transform: uppercase;
+    @media screen and (min-width: 834px) {
+      font-size: 48px;
+      margin-bottom: 40px;
+    }
+    @media screen and (min-width: 1440px) {
+      margin-left: 217px;
+      margin-bottom: 0px;
+    }
+    &_wrapper {
+      @media screen and (min-width: 834px) and (max-width: 1439px) {
+        align-items: center;
+      }
+    }
+    &_aa {
+      @media screen and (min-width: 834px) and (max-width: 1439px) {
+        display: inline-block;
+      }
+    }
+    &_bb {
+      @media screen and (min-width: 834px) and (max-width: 1439px) {
+        display: inline-block;
+        margin-left: 82px;
+      }
+      @media screen and (min-width: 1440px) {
+        display: inline-block;
+        margin-left: 98px;
+      }
+    }
+    &_cc {
+      @media screen and (min-width: 834px) and (max-width: 1439px) {
+        display: inline-block;
+        margin-left: 180px;
+      }
+    }
+
+    &_spanOne {
+      @media screen and (max-width: 833px) {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+    &_spanTwo {
+      color: $accent-color;
+      @media screen and (max-width: 833px) {
+        display: flex;
+        justify-content: flex-end;
+      }
+    }
+    &_spanThree {
+      &_inner {
+        color: $accent-color;
+      }
+      @media screen and (min-width: 834px) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+    &_spanFour {
+      @media screen and (max-width: 833px) {
+        display: flex;
+        justify-content: flex-end;
+      }
+      @media screen and (min-width: 1440px) {
+        display: inline-block;
+        margin-left: 186px;
+      }
+    }
+    &_spanFive {
+      @media screen and (max-width: 833px) {
+        display: flex;
+        justify-content: flex-end;
+      }
+      @media screen and (min-width: 834px) and (max-width: 1439px) {
+        margin-left: 82px;
+      }
+    }
+  }
+  &_contactWrapper {
+    @media screen and (max-width: 833px) {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+    }
+    @media screen and (min-width: 1440px) {
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+  &_imgPC {
+    display: none;
+    @media screen and (min-width: 1440px) {
+      display: block;
+      margin-right: 105px;
+    }
+  }
+  &_img {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 2;
+    @media screen and (min-width: 834px) {
+      margin-bottom: 16px;
+    }
+    @media screen and (min-width: 1440px) {
+      display: none;
+    }
+  }
+  &_bg {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    &_mob {
+      @media screen and (min-width: 834px) {
+        display: none;
+      }
+    }
+    &_tablet {
+      top: 54%;
+      left: 62%;
+      @media screen and (max-width: 833px) {
+        display: none;
+      }
+      @media screen and (min-width: 1440px) {
+        display: none;
+      }
+    }
+    &_pc {
+      top: 0%;
+      left: 84%;
+      @media screen and (max-width: 1439px) {
+        display: none;
+      }
+    }
+  }
+}
+.form {
+  font-family: var(--font-lato);
+  font-size: 16px;
+  font-weight: 300;
+  color: black;
+  @media screen and (max-width: 833px) {
+    width: 100%;
+    font-size: 18px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 100%;
+  }
+  &_imgWrapper {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    @media screen and (min-width: 834px) {
+      display: unset;
+    }
+  }
+  &_inputNamesWrapper {
+    width: 100%;
+    max-width: 182px;
+    @media screen and (min-width: 834px) {
+      max-width: unset;
+      display: flex;
+      justify-content: space-between;
+    }
+    &_innerWrapperNames {
+      position: relative;
+      // overflow: hidden;
+      height: 50px;
+      transition: background-color 300ms;
+      &:first-child {
+        margin-bottom: 15px;
+        @media screen and (min-width: 834px) {
+          margin-right: 32px;
+          margin-bottom: 0;
+        }
+      }
+      @media screen and (min-width: 834px) {
+        width: 100%;
+      }
+      @media screen and (min-width: 1440px) {
+        &:first-child {
+          margin-right: 30px;
+        }
+      }
+
+      &_nameInput {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        font-family: var(--font-lato);
+        font-size: 16px;
+        transition: background-color 300ms;
+        outline: none;
+        border: none;
+        border-bottom: 1px solid black;
+        &:hover,
+        &:focus,
+        &:valid {
+          color: rgb(0, 0, 0);
+          background-color: #a3957b23;
+        }
+        &:focus ~ .placeHolder,
+        &:valid ~ .placeHolder {
+          color: white;
+          transform: translateY(-300px);
+        }
+
+        @media screen and (min-width: 834px) {
+          &:focus ~ .placeHolder,
+          &:valid ~ .placeHolder {
+            color: white;
+            transform: translateY(-350px);
+          }
+          width: 100%;
+        }
+        @media screen and (min-width: 1440px) {
+          width: 352.5px;
+        }
+      }
+    }
+  }
+}
+
+.boxInputEmailPhone {
+  position: relative;
+  // overflow: hidden;
+  height: 50px;
+  border: none;
+  transition: background-color 300ms;
+  @media screen and (max-width: 833px) {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  @media screen and (min-width: 834px) {
+    width: 100%;
+    &:first-child {
+      margin-right: 32px;
+    }
+  }
+  @media screen and (min-width: 1440px) {
+    width: 352.5px;
+    &:first-child {
+      margin-right: 30px;
+    }
+  }
+}
+
+.boxInputMessage {
+  position: relative;
+  // overflow: hidden;
+  height: 110px;
+  min-width: 291px;
+  border: none;
+  transition: background-color 300ms;
+  margin-bottom: 16px;
+  @media screen and (min-width: 834px) {
+    margin-bottom: 24px;
+    width: 100%;
+  }
+  @media screen and (min-width: 1440px) {
+    margin-bottom: 20px;
+  }
+}
+
+.placeHolder {
+  position: absolute;
+  font-family: var(--font-lato);
+  font-size: 16px;
+  font-weight: 300;
+  color: black;
+  margin-left: 20px;
+  transform: translate(0px, -50%);
+  top: 50%;
+  left: 0px;
+  display: inline-block;
+  pointer-events: none;
+  transition: transform 600ms, color 300ms;
+  @media screen and (min-width: 834px) {
+    font-size: 18px;
+  }
+}
+
+.telField {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-lato);
+  font-size: 16px;
+  transition: background-color 300ms, scale 300ms;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  &:hover,
+  &:focus,
+  &:valid {
+    color: rgb(0, 0, 0);
+    background-color: #a3957b23;
+  }
+  &:focus ~ .placeHolder,
+  &:valid ~ .placeHolder {
+    color: white;
+    transform: translateY(-30px);
+  }
+  @media screen and (min-width: 834px) {
+    &:focus ~ .placeHolder,
+    &:valid ~ .placeHolder {
+      color: white;
+      transform: translateY(-350px);
+    }
+    width: 100%;
+  }
+}
+.emailField {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-lato);
+  font-size: 16px;
+  transition: background-color 300ms, scale 300ms;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+
+  &:hover,
+  &:focus,
+  &:valid {
+    color: rgb(0, 0, 0);
+    background-color: #a3957b23;
+  }
+  &:focus ~ .placeHolder,
+  &:valid ~ .placeHolder {
+    color: white;
+    transform: translateY(-30px);
+  }
+  @media screen and (min-width: 834px) {
+    &:focus ~ .placeHolder,
+    &:valid ~ .placeHolder {
+      color: white;
+      transform: translateY(-350px);
+    }
+    width: 100%;
+  }
+}
+
+.messageField {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  font-family: var(--font-lato);
+  font-size: 16px;
+  transition: background-color 300ms, scale 300ms;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+
+  &:hover,
+  &:focus,
+  &:valid {
+    color: rgb(0, 0, 0);
+    background-color: #a3957b23;
+  }
+  &:focus ~ .placeHolder,
+  &:valid ~ .placeHolder {
+    color: white;
+    transform: translateY(-300px);
+  }
+  @media screen and (min-width: 834px) {
+    &:focus ~ .placeHolder,
+    &:valid ~ .placeHolder {
+      color: white;
+      transform: translateY(-350px);
+    }
+    width: 100%;
+  }
+}
+
+.wrapperTelMail {
+  @media screen and (min-width: 834px) {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.btn.buttonContact {
+  font-family: var(--font-lato);
+  font-size: 16px;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: $accent-color;
+  color: $light-color;
+  position: relative;
+  z-index: 1;
+  @media screen and (min-width: 834px) {
+    font-size: 18px;
+  }
+}
+.arrow.arrowContact {
+  stroke: $light-color;
+}
+.wrapperPosition {
+  position: relative;
+
+  overflow: visible;
+}
+
+.errorWrapper {
+  position: absolute;
+  right: 0px;
+  bottom: -15px;
+  .error {
+    font-family: var(--font-lato);
+    font-size: 13px;
+    font-weight: 600;
+    color: #8f0000;
+    text-align: left;
+  }
 }

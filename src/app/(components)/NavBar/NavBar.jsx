@@ -8,6 +8,7 @@ import styles from "../../(styles)/NavBar.module.scss";
 import containerStyle from "../../(styles)/Container.module.scss";
 import NavigationList from "./NavigationList";
 import { usePathname } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
 
 const NavBar = () => {
   const pathname = usePathname();
@@ -36,9 +37,14 @@ const NavBar = () => {
   return (
     <div className={containerStyle.container}>
       <div className={styles.wrapper}>
-        {showMobMenu && <MobileMenu setShow={setShowMobMenu} />}
+        <AnimatePresence>
+          {showMobMenu && <MobileMenu setShow={setShowMobMenu} />}
+        </AnimatePresence>
         <Logo />
-        <NavigationList className={styles.navBigScreen} />
+        <NavigationList
+          currentPage={JSON.stringify(pathname)}
+          className={styles.navBigScreen}
+        />
         {!showMobMenu && (
           <button className={styles.btn} onClick={() => handleShowMobMenu()}>
             <img

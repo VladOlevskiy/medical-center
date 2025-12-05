@@ -12,11 +12,11 @@
   background-color: transparent;
   border: 1px solid $accent-color;
   cursor: pointer;
-  transition: background-color 500ms ease;
-  // @media screen and (max-width: 400px) {
-  //   width: 100%;
-  //   max-width: 182px;
-  // }
+  transition: scale 500ms ease;
+  &:hover,
+  &:focus {
+    scale: 0.97;
+  }
   @media screen and (min-width: 834px) {
     min-width: 213px;
     min-height: 50px;
